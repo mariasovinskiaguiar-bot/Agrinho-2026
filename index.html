@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroForte Tech 3D</title>
+
+<style>
+:root{
+  --verde:#00ff88;
+  --azul:#00d4ff;
+  --roxo:#a855ff;
+  --amarelo:#ffe600;
+  --vermelho:#ff2e2e;
+  --fundo:#050a08;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI, Arial;
+}
+
+body{
+  background: radial-gradient(circle at top, #0d2b1e, var(--fundo));
+  color:white;
+}
+
+/* HEADER 3D */
+header{
+  background: linear-gradient(90deg,var(--verde),var(--azul),var(--roxo));
+  padding:25px;
+  text-align:center;
+  box-shadow:0 0 40px rgba(0,255,200,0.4);
+  transform: perspective(800px) rotateX(5deg);
+}
+
+header h1{
+  font-size:3rem;
+  letter-spacing:3px;
+  text-shadow:0 0 20px rgba(255,255,255,0.5);
+}
+
+/* HERO 3D */
+.hero{
+  text-align:center;
+  padding:70px 20px;
+}
+
+.hero h2{
+  font-size:3rem;
+  color:var(--amarelo);
+  text-shadow:0 0 25px rgba(255,230,0,0.9);
+}
+
+.hero p{
+  margin-top:10px;
+  color:#bfffe0;
+}
+
+/* BOTÕES 3D */
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-top:30px;
+}
+
+button{
+  padding:14px 20px;
+  border:none;
+  border-radius:12px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+  color:black;
+  box-shadow:0 8px 0 rgba(0,0,0,0.4);
+}
+
+button:active{
+  transform:translateY(6px);
+  box-shadow:0 2px 0 rgba(0,0,0,0.6);
+}
+
+.btn1{background:var(--verde);}
+.btn2{background:var(--azul);}
+.btn3{background:var(--roxo);}
+.btn4{background:var(--amarelo);}
+
+/* CONTAINER */
+.container{
+  max-width:1000px;
+  margin:40px auto;
+  padding:20px;
+}
+
+/* CARDS 3D */
+.card{
+  display:none;
+  margin-top:20px;
+  padding:25px;
+  border-radius:18px;
+  transform: perspective(900px) rotateX(10deg);
+  box-shadow:0 20px 40px rgba(0,0,0,0.5),
+             0 0 25px rgba(0,255,200,0.3);
+  animation:pop 0.5s ease;
+}
+
+/* cores fortes */
+#c1{background:linear-gradient(135deg,#003d1f,#00ff88);}
+#c2{background:linear-gradient(135deg,#00334d,#00d4ff);}
+#c3{background:linear-gradient(135deg,#2a004d,#a855ff);}
+#c4{background:linear-gradient(135deg,#665200,#ffe600); color:black;}
+
+.card h3{
+  font-size:1.6rem;
+  margin-bottom:10px;
+}
+
+@keyframes pop{
+  from{opacity:0; transform:scale(0.8) rotateX(20deg);}
+  to{opacity:1; transform:scale(1) rotateX(10deg);}
+}
+
+/* ALERTA 3D */
+.alert{
+  margin:30px auto;
+  padding:18px;
+  background:linear-gradient(90deg,var(--vermelho),var(--amarelo));
+  color:black;
+  font-weight:bold;
+  text-align:center;
+  border-radius:12px;
+  box-shadow:0 0 30px rgba(255,0,0,0.5);
+  animation:blink 1.5s infinite;
+}
+
+@keyframes blink{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.03);}
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  margin-top:40px;
+  background:linear-gradient(90deg,var(--verde),var(--azul),var(--roxo));
+  box-shadow:0 -10px 30px rgba(0,0,0,0.4);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>AGROFORTE TECH 3D</h1>
+</header>
+
+<section class="hero">
+  <h2>🌱 FUTURO DO AGRO EM 3D</h2>
+  <p>IA • Drones • Sensores • Agricultura Inteligente</p>
+
+  <div class="buttons">
+    <button class="btn1" onclick="toggle('c1')">Produção</button>
+    <button class="btn2" onclick="toggle('c2')">Umidade</button>
+    <button class="btn3" onclick="toggle('c3')">Máquinas</button>
+    <button class="btn4" onclick="toggle('c4')">Sustentabilidade</button>
+  </div>
+</section>
+
+<div class="container">
+
+<div class="alert">
+⚠ ALERTA: Condição climática instável detectada no setor agrícola
+</div>
+
+<div id="c1" class="card">
+  <h3>🌾 Produção</h3>
+  <p><b>98%</b> eficiência total da safra.</p>
+</div>
+
+<div id="c2" class="card">
+  <h3>💧 Umidade</h3>
+  <p><b>42%</b> nível atual monitorado por sensores.</p>
+</div>
+
+<div id="c3" class="card">
+  <h3>🚜 Máquinas</h3>
+  <p><b>12</b> máquinas operando em tempo real.</p>
+</div>
+
+<div id="c4" class="card">
+  <h3>🌿 Sustentabilidade</h3>
+  <p>Redução de <b>30%</b> de impacto ambiental.</p>
+</div>
+
+</div>
+
+<footer>
+AGROFORTE TECH © 2026 - Agricultura do Futuro
+</footer>
+
+<script>
+function toggle(id){
+  let el = document.getElementById(id);
+  el.style.display = (el.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
