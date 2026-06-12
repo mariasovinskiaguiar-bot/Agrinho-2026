@@ -17,7 +17,7 @@ Painel de monitoramento agrícola inteligente com interface moderna e efeitos vi
 ## 🚀 Tecnologias
 
 * **HTML5:** Estrutura semântica.
-* **CSS3:** Animações (`@keyframes`), variáveis e estilização neon.
+* **CSS3:** Animações (`@keyframes`), variáveis e estilização neon.  
 * **JavaScript:** Função nativa `toggle()` para exibição dinâmica dos dados.
 
 ---
